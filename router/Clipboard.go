@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func upd(c *gin.Context) {
+func write(c *gin.Context) {
 	json := make(map[string]string)
 	c.BindJSON(&json)
 	msg := json["content"]
@@ -22,7 +22,7 @@ func upd(c *gin.Context) {
 	}
 
 }
-func get(c *gin.Context) {
+func read(c *gin.Context) {
 	cl := model.GetClipboard()
 	c.JSON(200, model.Result{Code: 200, Success: true, Message: "获取成功", Clipboard: cl})
 }
@@ -32,8 +32,8 @@ func listLog(c *gin.Context) {
 func Clipboard(e *gin.Engine) {
 	g := e.Group("/clipboard")
 	{
-		g.POST("/upd", upd)
-		g.GET("/get", get)
+		g.POST("/write", write)
+		g.GET("/read", read)
 		g.GET("/listLog", listLog)
 	}
 
