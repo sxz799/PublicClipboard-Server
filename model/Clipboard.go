@@ -29,7 +29,7 @@ func AddLog(log Log) {
 	tLogs := []Log{log}
 	Logs = append(tLogs, Logs...)
 	if len(Logs) > 10 {
-		Logs = Logs[1:]
+		Logs = Logs[:9]
 	}
 	return
 }

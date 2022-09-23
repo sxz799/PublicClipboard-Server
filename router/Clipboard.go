@@ -2,8 +2,9 @@ package router
 
 import (
 	"PublicClipboard/model"
-	"github.com/gin-gonic/gin"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 func write(c *gin.Context) {
