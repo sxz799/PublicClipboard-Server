@@ -1,0 +1,5 @@
+server :
+  port : 3000
+  ginMode : release # debug || release || test
+config :
+  frontMode : true # 前段整合模式 即前端文件放到static目录下省去nginx服务器
