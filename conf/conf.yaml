@@ -1,5 +1,5 @@
 server :
-  port : 9090
+  port : 3000
   ginMode : release # debug || release || test
 config :
   historyNum : 10 # 显示历史条数

@@ -15,7 +15,7 @@ var (
 func init() {
 	log.Println("正在应用配置文件...")
 	viper.SetConfigName("conf")
-	viper.SetConfigType("yml")
+	viper.SetConfigType("yaml")
 	viper.AddConfigPath("conf")
 	err := viper.ReadInConfig()
 	if err != nil {
