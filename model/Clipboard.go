@@ -1,6 +1,7 @@
 package model
 
 import (
+	"PublicClipboard/gobalConfig"
 	"gorm.io/gorm"
 )
 
@@ -28,8 +29,8 @@ func AddLog(log Log) {
 	log.Id = len(Logs)
 	tLogs := []Log{log}
 	Logs = append(tLogs, Logs...)
-	if len(Logs) > 10 {
-		Logs = Logs[:9]
+	if len(Logs) > gobalConfig.HistoryNum {
+		Logs = Logs[:gobalConfig.HistoryNum-1]
 	}
 	return
 }

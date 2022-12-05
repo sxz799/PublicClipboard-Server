@@ -9,6 +9,7 @@ var (
 	ServerPort string
 	FrontMode  bool
 	GinMode    string
+	HistoryNum int
 )
 
 func init() {
@@ -25,4 +26,5 @@ func init() {
 	ServerPort = viper.GetString("server.port")
 	GinMode = viper.GetString("server.ginMode")
 	FrontMode = viper.GetBool("config.frontMode")
+	HistoryNum = viper.GetInt("config.historyNum")
 }

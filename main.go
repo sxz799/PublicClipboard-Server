@@ -20,5 +20,6 @@ func main() {
 		})
 	}
 	router.RegRouter(r)
+	log.Println("路由注册完成！当前端口为:", gobalConfig.ServerPort)
 	r.Run(":" + gobalConfig.ServerPort)
 }
