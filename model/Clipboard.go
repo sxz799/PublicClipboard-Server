@@ -30,7 +30,7 @@ func AddLog(log Log) {
 	tLogs := []Log{log}
 	Logs = append(tLogs, Logs...)
 	if len(Logs) > gobalConfig.HistoryNum {
-		Logs = Logs[:gobalConfig.HistoryNum-1]
+		Logs = Logs[:gobalConfig.HistoryNum]
 	}
 	return
 }
